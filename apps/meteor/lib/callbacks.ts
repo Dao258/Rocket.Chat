@@ -102,6 +102,10 @@ type ChainedCallbackSignatures = {
 		BusinessHourBehaviorClass: { new (): IBusinessHourBehavior };
 	};
 	'renderMessage': <T extends IMessage & { html: string }>(message: T) => T;
+	'voip.beforeCloseRoom': (options: {
+		comment?: string;
+		tags?: string[];
+	}) => { filteredOptions: { comment?: string; tags?: string[] } } | undefined;
 };
 
 type Hook =

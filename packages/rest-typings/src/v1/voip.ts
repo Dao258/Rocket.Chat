@@ -104,8 +104,7 @@ export type VoipEndpoints = {
     POST: (params: {
       rid: string;
       token: string;
-      comment: string;
-      tags?: string[];
+      options: { comment?: string; tags?: string[] };
     }) => { rid: string };
   };
 };
